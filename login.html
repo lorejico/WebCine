@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <!-- Tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font awesome-->
+    <script src="https://kit.fontawesome.com/8dfbcf55d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="login-body">
+
+    <header class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex flex-wrap items-center justify-around">
+            <!-- Logo -->
+            <div class="text-2xl font-bold mb-2 lg:mb-0">
+                Tu cine en casa
+            </div>
+            <!-- Menú de navegación izquierdo con Tailwind CSS -->
+            <nav class="flex flex-wrap items-center space-x-4 mb-4 lg:mb-0">
+                <a href="index.html" class="hover:text-blue-300">Inicio</a>
+                <a href="/nosotros" class="hover:text-blue-300">Nosotros</a>
+                <a href="/servicios" class="hover:text-blue-300">Servicios</a>
+                <a href="/contacto" class="hover:text-blue-300">Contacto</a>
+            </nav>
+
+            <!-- Formulario de búsqueda -->
+            <form action="/resultados" method="get" class="flex items-center">
+                <input type="text" name="query" placeholder="Buscar..."
+                    class="px-2 py-1 rounded-lg focus:outline-none focus:ring focus:border-blue-300 mr-2 mb-2 lg:mb-0">
+                <button type="submit"
+                    class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mr-2 mb-2 rounded-lg">Buscar</button>
+            </form>
+
+            <!-- Menú de navegación derecho con Tailwind CSS -->
+            <nav class="flex items-center space-x-4">
+                <!-- Icono de estrella y enlace a Favoritos -->
+                <a href="/favoritos.html" class="text-white-400 hover:text-yellow-300">
+                    <i class="fas fa-star"></i>
+                </a>
+
+                <!-- Enlace para iniciar sesión -->
+                <a href="login.html" class="hover:text-blue-300">Iniciar Sesión</a>
+                <!-- Enlace para registrarse -->
+                <a href="register.html" class="hover:text-blue-300">Registrarse</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="bg-gray-100 h-screen flex items-center justify-center">
+        <div class="login-container bg-white p-8 rounded shadow-lg w-96">
+            <h2 class="text-2xl font-bold mb-4 text-center">Iniciar Sesión</h2>
+
+            <!-- Formulario de inicio de sesión -->
+            <form>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-600">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded">
+                </div>
+
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium text-gray-600">Contraseña</label>
+                    <input type="password" id="password" name="password" class="mt-1 p-2 w-full border rounded">
+                </div>
+
+                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white py-2 rounded">Iniciar
+                    Sesión</button>
+            </form>
+
+            <p class="mt-4 text-sm text-gray-600 text-center">¿No tienes una cuenta? <a href="register.html"
+                    class="text-blue-500 hover:underline">Regístrate aquí</a>.</p>
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

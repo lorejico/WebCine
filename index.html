@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tu cine en casa</title>
+  <!-- Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Tailwind-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font awesome-->
+  <script src="https://kit.fontawesome.com/8dfbcf55d2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-gray-100">
+  <header class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto flex flex-wrap items-center justify-around">
+      <!-- Logo -->
+      <div class="text-2xl font-bold mb-2 lg:mb-0">
+        Tu cine en casa
+      </div>
+      <!-- Menú de navegación izquierdo con Tailwind CSS -->
+      <nav class="flex flex-wrap items-center space-x-4 mb-4 lg:mb-0">
+        <a href="index.html" class="hover:text-blue-300">Inicio</a>
+        <a href="/nosotros" class="hover:text-blue-300">Nosotros</a>
+        <a href="/servicios" class="hover:text-blue-300">Servicios</a>
+        <a href="/contacto" class="hover:text-blue-300">Contacto</a>
+      </nav>
+
+      <!-- Formulario de búsqueda -->
+      <form action="/resultados" method="get" class="flex items-center">
+        <input type="text" name="query" placeholder="Buscar..."
+          class="px-2 py-1 rounded-lg focus:outline-none focus:ring focus:border-blue-300 mr-2 mb-2 lg:mb-0">
+        <button type="submit"
+          class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mr-2 mb-2 rounded-lg">Buscar</button>
+      </form>
+
+      <!-- Menú de navegación derecho con Tailwind CSS -->
+      <nav class="flex items-center space-x-4">
+        <!-- Icono de estrella y enlace a Favoritos -->
+        <a href="/favoritos.html" class="text-white-400 hover:text-yellow-300">
+          <i class="fas fa-star"></i>
+        </a>
+
+        <!-- Enlace para iniciar sesión -->
+        <a href="login.html" class="hover:text-blue-300">Iniciar Sesión</a>
+        <!-- Enlace para registrarse -->
+        <a href="register.html" class="hover:text-blue-300">Registrarse</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+    <section class="container-fluid mx-auto my-8">
+      <section class="container-fluid mx-auto my-8">
+        <!-- Carrusel con Bootstrap -->
+        <article class="mb-6">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/carousel-animation.png" class="d-block w-100 h-auto" alt="Foto animacion">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Animaciones</h5>
+                            <p>Descubre nuestras animaciones increíbles</p>
+                            <a href="/animaciones" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/carousel-terror.png" class="d-block w-100 h-auto" alt="Foto terror">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Terror</h5>
+                            <p>Explora nuestro catálogo de películas de terror</p>
+                            <a href="/terror" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/carousel-famous.png" class="d-block w-100 h-auto" alt="Foto mas vistas">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Famosos</h5>
+                            <p>Conoce a las estrellas más grandes de la industria</p>
+                            <a href="/famosos" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </article>
+    </section>
+    
+
+  
+
+      <!-- Lista de Fotos en Horizontal con Tailwind CSS -->
+      <article class="mb-6">
+        <div class="flex flex-wrap -mx-2">
+          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 px-2 mb-4">
+            <img src="foto4.jpg" alt="Foto 4" class="w-full h-auto rounded">
+          </div>
+          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 px-2 mb-4">
+            <img src="foto5.jpg" alt="Foto 5" class="w-full h-auto rounded">
+          </div>
+          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 px-2 mb-4">
+            <img src="foto6.jpg" alt="Foto 6" class="w-full h-auto rounded">
+          </div>
+          <!-- Agrega más imágenes según sea necesario -->
+        </div>
+      </article>
+    </section>
+
+    <!-- Scripts de Bootstrap (jQuery y Popper.js son requeridos por Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </main>
+
+  <footer></footer>
+
+  <!-- Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
