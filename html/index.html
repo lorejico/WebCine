@@ -16,14 +16,14 @@
 </head>
 
 <body class="bg-customBackground text-customDark">
-  <header class="bg-gray-800 text-white py-4">
-    <div class="container mx-auto flex flex-wrap items-center justify-around">
+  <header class="bg-gray-800 text-white py-3">
+    <div class="container-fluid mx-auto flex flex-wrap items-center justify-around">
       <!-- Logo -->
       <div class="text-2xl font-bold mb-2 lg:mb-0">
         Tu cine en casa
       </div>
       <!-- Menú de navegación izquierdo con Tailwind CSS -->
-      <nav class="flex flex-wrap items-center space-x-4 mb-4 lg:mb-0">
+      <nav class="flex flex-wrap space-x-4 lg:mb-0">
         <a href="index.html" class="hover:text-blue-300">Inicio</a>
         <a href="/nosotros" class="hover:text-blue-300">Nosotros</a>
         <a href="/servicios" class="hover:text-blue-300">Servicios</a>
@@ -33,9 +33,8 @@
       <!-- Formulario de búsqueda -->
       <form action="/resultados" method="get" class="flex items-center">
         <input type="text" name="query" placeholder="Buscar..."
-          class="px-2 py-1 rounded-lg focus:outline-none focus:ring focus:border-blue-300 mr-2 mb-2 lg:mb-0">
-        <button type="submit"
-          class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mr-2 mb-2 rounded-lg">Buscar</button>
+          class="px-2 py-1 rounded-lg focus:outline-none focus:ring focus:border-blue-300 mr-2 lg:mb-0">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mr-2 rounded-lg">Buscar</button>
       </form>
 
       <!-- Menú de navegación derecho con Tailwind CSS -->
@@ -44,7 +43,6 @@
         <a href="/favoritos.html" class="text-white-400 hover:text-yellow-300">
           <i class="fas fa-star"></i>
         </a>
-
         <!-- Enlace para iniciar sesión -->
         <a href="login.html" class="hover:text-blue-300">Iniciar Sesión</a>
         <!-- Enlace para registrarse -->
@@ -60,7 +58,7 @@
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="img/carousel-animation.png" class="d-block w-100 overflow-hidden" alt="Foto animación">
+              <img src="../img/carousel-animation.png" class="d-block w-100 h-[600px]" alt="Foto animación">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Animaciones</h5>
                 <p>Descubre nuestras animaciones increíbles</p>
@@ -68,7 +66,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/carousel-series.png" class="d-block w-100" alt="Foto más vistas">
+              <img src="../img/carousel-series.png" class="d-block w-100 h-[600px]" alt="Foto más vistas">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Series</h5>
                 <p>Explora nuestro catálogo de series</p>
@@ -76,7 +74,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/carousel-famous.png" class="d-block w-100" alt="Foto más vistas">
+              <img src="../img/carousel-famous.png" class="d-block w-100 h-[600px]" alt="Foto más vistas">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Las más vistas</h5>
                 <p>Conoce a las estrellas más grandes de la industria</p>
@@ -97,31 +95,43 @@
         </div>
       </article>
 
+      <!-- Lista de peliculas más vistas -->
+      <section class="container-fluid mx-auto my-8">
+        <h2 class="text-2xl font-bold mb-4 text-customDark lg:text-left">Películas más vistas</h2>
 
+        <div class="flex flex-wrap justify-center lg:justify-start">
+          <!-- Repite este bloque para más películas -->
+          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-4 transition duration-300 transform hover:scale-105">
+            <a href="register.html" class="block relative rounded overflow-hidden">
+              <img src="../img/peliculas/avatar.png" alt="Avatar"
+                class="w-full h-[300px] object-cover object-center hover:opacity-75">
+              <div class="bg-gray-900 bg-opacity-75 absolute bottom-0 w-full text-white py-2 text-center">
+                <p class="font-bold text-lg mb-1">Avatar</p>
+                <p class="text-sm">Estreno: Fecha</p>
+              </div>
+            </a>
+          </div>
 
-      <!-- Lista de Fotos en Horizontal con Tailwind CSS -->
-      <article class="mb-6">
-        <div class="flex flex-wrap">
-          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 px-2 mb-4">
-            <img src="foto4.jpg" alt="Foto 4" class="w-full h-auto rounded">
+          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-4 transition duration-300 transform hover:scale-105">
+            <a href="register.html" class="block relative rounded overflow-hidden">
+              <img src="../img/peliculas/titanic.png" alt="Titanic"
+                class="w-full h-[300px] object-cover object-center hover:opacity-75">
+              <div class="bg-gray-900 bg-opacity-75 absolute bottom-0 w-full text-white py-2 text-center">
+                <p class="font-bold text-lg mb-1">Titanic</p>
+                <p class="text-sm">Estreno: Fecha</p>
+              </div>
+            </a>
           </div>
-          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 px-2 mb-4">
-            <img src="foto5.jpg" alt="Foto 5" class="w-full h-auto rounded">
-          </div>
-          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 px-2 mb-4">
-            <img src="foto6.jpg" alt="Foto 6" class="w-full h-auto rounded">
-          </div>
-          <!-- Agrega más imágenes según sea necesario -->
+     
         </div>
-      </article>
-    </section>
+      </section>
 
-    <!-- Scripts de Bootstrap (jQuery y Popper.js son requeridos por Bootstrap) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Scripts de Bootstrap (jQuery y Popper.js son requeridos por Bootstrap) -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </main>
 
-  <footer class="bg-gray-800 text-white py-6">
-    <div class="container mx-auto flex flex-col items-center lg:flex-row lg:justify-between">
+  <footer class="bg-gray-800 text-white py-2">
+    <div class="container mx-auto flex flex-col  lg:flex-row lg:justify-between">
       <!-- Logo o nombre del sitio -->
       <div class="text-2xl font-bold mb-4 lg:mb-0">
         Tu Cine en Casa
