@@ -5,83 +5,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
-    <!-- Tailwind-->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Font awesome-->
     <script src="https://kit.fontawesome.com/8dfbcf55d2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Tipografia-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- CDN Tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customDark: '#0d1b2a',
+                        customDarkBlue: '#1b263b',
+                        customBlue: '#415a77',
+                        customLightBlue: '#778da9',
+                        customWhite: '#e0e1dd'
+                    },
+                    fontFamily: {
+                        pacificLogo: ['Pacifico', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body class="bg-customWhite text-customDark">
+    <header
+        class="container-fluid mx-auto flex flex-wrap items-center justify-between bg-customDark text-customWhite py-3">
+        <!-- Nombre del sitio -->
+        <a href="../index.html"
+            class="text-2xl font-bold font-pacificLogo mb-2 lg:mb-0 flex flex-wrap w-full lg:w-auto space-x-4 mt-2 lg:mt-0 justify-center lg:justify-start">
+            Tu cine en casa
+        </a>
+        <!-- Menú de navegación con Tailwind CSS -->
+        <nav class="flex flex-wrap w-full lg:w-auto space-x-4 mt-2 lg:mt-0 justify-center lg:justify-start">
+            <a href="../index.html" class="hover:text-customLightBlue">Inicio</a>
+            <a href="/nosotros" class="hover:text-customLightBlue">Películas</a>
+            <a href="/servicios" class="hover:text-customLightBlue">Series</a>
+            <a href="/contacto" class="hover:text-customLightBlue">Contacto</a>
 
-    <header class="bg-gray-800 text-white py-4">
-        <div class="container mx-auto flex flex-wrap items-center justify-around">
-            <!-- Logo -->
-            <div class="text-2xl font-bold mb-2 lg:mb-0">
-                Tu cine en casa
-            </div>
-            <!-- Menú de navegación izquierdo con Tailwind CSS -->
-            <nav class="flex flex-wrap items-center space-x-4 mb-4 lg:mb-0">
-                <a href="../index.html" class="hover:text-blue-300">Inicio</a>
-                <a href="/nosotros" class="hover:text-blue-300">Nosotros</a>
-                <a href="/servicios" class="hover:text-blue-300">Servicios</a>
-                <a href="/contacto" class="hover:text-blue-300">Contacto</a>
-            </nav>
+            <div class="flex flex-wrap space-x-4 self-center lg:mb-0 content-center">
+                <!-- Formulario de búsqueda -->
+                <form action="/resultados" method="get" class="flex items-center space-x-2">
+                    <input type="text" name="query" placeholder="Buscar..."
+                        class="px-1/2 py-1 rounded-lg focus:outline-none focus:ring focus:border-customLightBlue lg:mb-0 text-sm">
+                    <button type="submit"
+                        class="bg-customLightBlue hover:bg-customBlue text-customWhite px-2 py-1 mr-2 rounded-lg">Buscar</button>
+                </form>
 
-            <!-- Formulario de búsqueda -->
-            <form action="/resultados" method="get" class="flex items-center">
-                <input type="text" name="query" placeholder="Buscar..."
-                    class="px-2 py-1 rounded-lg focus:outline-none focus:ring focus:border-blue-300 mr-2 mb-2 lg:mb-0">
-                <button type="submit"
-                    class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 mr-2 mb-2 rounded-lg">Buscar</button>
-            </form>
-
-            <!-- Menú de navegación derecho con Tailwind CSS -->
-            <nav class="flex items-center space-x-4">
                 <!-- Icono de estrella y enlace a Favoritos -->
-                <a href="/favoritos.html" class="text-white-400 hover:text-yellow-300">
-                    <i class="fas fa-star"></i>
+                <a href="/favoritos.html" class="text-customWhite hover:text-yellow-300">
+                    <i class="fa-solid fa-star"></i>
                 </a>
-
-                <!-- Enlace para iniciar sesión -->
-                <a href="login.html" class="hover:text-blue-300">Iniciar Sesión</a>
-                <!-- Enlace para registrarse -->
-                <a href="register.html" class="hover:text-blue-300">Registrarse</a>
-            </nav>
-        </div>
+                <!-- Icono de usuario y enlace a login y registro -->
+                <a href="html/login.html" class="text-customWhite hover:text-customLightBlue">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </nav>
     </header>
 
     <main class="bg-gray-100 h-screen flex items-center justify-center">
-        <div class="bg-white p-8 rounded shadow-lg w-96">
+        <div class="bg-customWhite p-8 rounded shadow-lg w-96">
             <h2 class="text-2xl font-bold mb-4 text-center">Registrarse</h2>
 
             <!-- Formulario de registro -->
             <form>
                 <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-gray-600">Nombre</label>
+                    <label for="name" class="block text-sm font-medium text-customDark">Nombre</label>
                     <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded">
                 </div>
 
                 <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-600">Correo Electrónico</label>
+                    <label for="email" class="block text-sm font-medium text-customDark">Correo Electrónico</label>
                     <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded">
                 </div>
 
                 <div class="mb-4">
-                    <label for="password" class="block text-sm font-medium text-gray-600">Contraseña</label>
+                    <label for="password" class="block text-sm font-medium text-customDark">Contraseña</label>
                     <input type="password" id="password" name="password" class="mt-1 p-2 w-full border rounded">
                 </div>
 
                 <button type="submit"
-                    class="w-full bg-blue-500 hover:bg-blue-700 text-white py-2 rounded">Registrarse</button>
+                    class="w-full bg-customBlue hover:bg-customDarkBlue text-customWhite py-2 rounded">Registrarse</button>
             </form>
 
-            <p class="mt-4 text-sm text-gray-600 text-center">¿Ya tienes una cuenta? <a href="login.html"
-                    class="text-blue-500 hover:underline">Inicia sesión aquí</a>.</p>
+            <p class="mt-4 text-sm text-customDark text-center">¿Ya tienes una cuenta? <a href="login.html"
+                    class="text-customBlue hover:underline">Inicia sesión aquí</a>.</p>
         </div>
 
     </main>
+    <footer class="bg-customDark text-customWhite py-2">
+        <nav class="container-fluid flex flex-col lg:flex-row lg:justify-between text-center">
+            <!-- Nombre del sitio -->
+            <a href="index.html" class="text-2xl font-bold font-pacificLogo lg:mb-0">
+                Tu cine en casa
+            </a>
 
+            <!-- Enlaces del footer -->
+            <p class="mt-1">2023 © Tu cine en casa - v1.0.0</p>
+
+            <!-- Redes sociales -->
+            <div class="flex flex-wrap space-x-4 mt-1 self-center lg:mb-0 content-center">
+                <a href="https://www.facebook.com/" class="text-customWhite hover:text-customLightBlue">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/" class="text-customWhite hover:text-customLightBlue">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" class="text-customWhite hover:text-customLightBlue">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </nav>
+    </footer>
+    <!-- Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
