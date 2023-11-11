@@ -73,36 +73,39 @@
         </nav>
     </header>
 
-    <main class="bg-gray-100 h-screen flex items-center justify-center">
-        <div class="bg-customWhite p-8 rounded shadow-lg w-96">
-            <h2 class="text-2xl font-bold mb-4 text-center">Registrarse</h2>
-
-            <!-- Formulario de registro -->
-            <form>
-                <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-customDark">Nombre</label>
-                    <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded">
+    <main class="container mx-auto my-8">
+        <h2 class="text-2xl font-bold mb-4 text-customDark lg:text-left">Tus favoritos</h2>
+        <section class="flex flex-col md:flex-row gap-8">
+            <!-- Película Titanic -->
+            <article id="titanic" class="bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row w-full">
+                <div class="md:w-1/3 flex items-center justify-center">
+                    <img src="../img/peliculas/titanic.png" alt="Imagen de Titanic" class="w-full h-60 object-cover rounded-lg">
                 </div>
-
-                <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-customDark">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded">
+                <div class="md:pl-4 mt-4 md:mt-0 md:w-2/3">
+                    <h2 class="text-3xl font-semibold mb-2">Titanic</h2>
+                    <p class="customDark mb-4">Jack (DiCaprio), un joven artista, en una partida de cartas gana un pasaje para América, en el Titanic...</p>
+                    <p class="customDark mb-1"><strong>Director:</strong> James Cameron</p>
+                    <p class="customDark mb-1"><strong>Año:</strong> 1997</p>
+                    <p class="customDark"><strong>Clasificación:</strong> PG-13</p>
                 </div>
-
-                <div class="mb-4">
-                    <label for="password" class="block text-sm font-medium text-customDark">Contraseña</label>
-                    <input type="password" id="password" name="password" class="mt-1 p-2 w-full border rounded">
+            </article>
+    
+            <!-- Película Avatar -->
+            <article id="avatar" class="bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row w-full">
+                <div class="md:w-1/3 flex items-center justify-center">
+                    <img src="../img/peliculas/avatar.png" alt="Imagen de Avatar" class="w-full h-60 object-cover rounded-lg">
                 </div>
-
-                <button type="submit"
-                    class="w-full bg-customBlue hover:bg-customDarkBlue text-customWhite py-2 rounded">Registrarse</button>
-            </form>
-
-            <p class="mt-4 text-sm text-customDark text-center">¿Ya tienes una cuenta? <a href="login.html"
-                    class="text-customBlue hover:underline">Inicia sesión aquí</a>.</p>
-        </div>
-
-    </main>
+                <div class="md:pl-4 mt-4 md:mt-0 md:w-2/3">
+                    <h2 class="text-3xl font-semibold mb-2">Título de la Película</h2>
+                    <p class="customDark mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <p class="customDark mb-1"><strong>Director:</strong> Nombre del Director</p>
+                    <p class="customDark mb-1"><strong>Año:</strong> 2023</p>
+                    <p class="customDark"><strong>Clasificación:</strong> PG-13</p>
+                </div>
+            </article>
+        </section>
+    </main> 
+    
     <footer class="bg-customDark text-customWhite py-2">
         <nav class="container-fluid flex flex-col lg:flex-row lg:justify-between text-center">
             <!-- Nombre del sitio -->
