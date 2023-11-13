@@ -48,13 +48,13 @@
         <!-- Menú de navegación con Tailwind CSS -->
         <nav class="flex flex-wrap w-full lg:w-auto space-x-4 mt-2 lg:mt-0 justify-center lg:justify-start">
             <a href="../index.html" class="hover:text-customLightBlue">Inicio</a>
-            <a href="/peliculas.html" class="hover:text-customLightBlue">Películas</a>
-            <a href="/series.html" class="hover:text-customLightBlue">Series</a>
-            <a href="/genero.html" class="hover:text-customLightBlue">Género</a>
+            <a href="peliculas.html" class="hover:text-customLightBlue">Películas</a>
+            <a href="series.html" class="hover:text-customLightBlue">Series</a>
+            <a href="genero.html" class="hover:text-customLightBlue">Género</a>
 
             <div class="flex flex-wrap space-x-4 self-center lg:mb-0 content-center">
                 <!-- Formulario de búsqueda -->
-                <form action="/resultados" method="get" class="flex items-center space-x-2">
+                <form action="#" method="get" class="flex items-center space-x-2">
                     <input type="text" name="query" placeholder="Buscar..."
                         class="px-1/2 py-1 rounded-lg focus:outline-none focus:ring focus:border-customLightBlue lg:mb-0 text-sm">
                     <button type="submit"
@@ -62,51 +62,144 @@
                 </form>
 
                 <!-- Icono de estrella y enlace a Favoritos -->
-                <a href="/favoritos.html" class="text-customWhite hover:text-yellow-300">
+                <a href="favoritos.html" class="text-customWhite hover:text-yellow-300">
                     <i class="fa-solid fa-star"></i>
                 </a>
                 <!-- Icono de usuario y enlace a login y registro -->
-                <a href="html/login.html" class="text-customWhite hover:text-customLightBlue">
+                <a href="login.html" class="text-customWhite hover:text-customLightBlue">
                     <i class="fa-solid fa-user"></i>
                 </a>
             </div>
         </nav>
     </header>
-
     <main class="container mx-auto my-8">
-        <section class="flex flex-col md:flex-row gap-8">
-            <!-- Película Titanic -->
+        <section class="flex flex-col md:flex-col gap-8">
+            <h2 class="text-2xl font-bold mb-4 text-customDark lg:text-left">No te pierdas ni un detalle de tus películas y series</h2>
             <article id="titanic" class="bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row w-full">
                 <div class="md:w-1/3 flex items-center justify-center">
-                    <img src="../img/peliculas/titanic.png" alt="Imagen de Titanic" class="w-full h-60 object-cover rounded-lg">
+                    <img src="../img/peliculas/titanic.png" alt="Imagen de Titanic"
+                        class="w-full h-60 object-cover rounded-lg">
                 </div>
                 <div class="md:pl-4 mt-4 md:mt-0 md:w-2/3">
                     <h2 class="text-3xl font-semibold mb-2">Titanic</h2>
-                    <p class="customDark mb-4">Jack (DiCaprio), un joven artista, en una partida de cartas gana un pasaje para América, en el Titanic...</p>
+                    <p class="customDark mb-4">Jack es un joven artista que gana un pasaje para viajar a América en el
+                        Titanic, el transatlántico más grande y seguro jamás construido. A bordo del buque conoce a
+                        Rose, una chica de clase alta que viaja con su madre y su prometido Cal, un millonario engreído
+                        a quien solo interesa el prestigio de la familia de su prometida. Jack y Rose se enamoran.
+                        Mientras, el lujoso transatlántico se acerca a un inmenso iceberg.</p>
                     <p class="customDark mb-1"><strong>Director:</strong> James Cameron</p>
                     <p class="customDark mb-1"><strong>Año:</strong> 1997</p>
-                    <p class="customDark"><strong>Clasificación:</strong> PG-13</p>
                 </div>
             </article>
-    
-            <!-- Película Avatar -->
+
             <article id="avatar" class="bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row w-full">
                 <div class="md:w-1/3 flex items-center justify-center">
-                    <img src="../img/peliculas/avatar.png" alt="Imagen de Avatar" class="w-full h-60 object-cover rounded-lg">
+                    <img src="../img/peliculas/avatar.png" alt="Imagen de Avatar"
+                        class="w-full h-60 object-cover rounded-lg">
                 </div>
                 <div class="md:pl-4 mt-4 md:mt-0 md:w-2/3">
-                    <h2 class="text-3xl font-semibold mb-2">Título de la Película</h2>
-                    <p class="customDark mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                    <p class="customDark mb-1"><strong>Director:</strong> Nombre del Director</p>
+                    <h2 class="text-3xl font-semibold mb-2">Avatar</h2>
+                    <p class="customDark mb-4">Entramos en el mundo Avatar de la mano de Jake Sully, un ex-Marine en
+                        silla de ruedas, que ha sido reclutado para viajar a Pandora, donde existe un mineral raro y muy
+                        preciado que puede solucionar la crisis energética existente en la Tierra.</p>
+                    <p class="customDark mb-1"><strong>Director:</strong> James Cameron</p>
+                    <p class="customDark mb-1"><strong>Año:</strong> 2009</p>
+                </div>
+            </article>
+
+            <article id="avengers" class="bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row w-full">
+                <div class="md:w-1/3 flex items-center justify-center">
+                    <img src="../img/peliculas/vengadores-infinity-war.png" alt="Imagen de avengers"
+                        class="w-full h-60 object-cover rounded-lg">
+                </div>
+                <div class="md:pl-4 mt-4 md:mt-0 md:w-2/3">
+                    <h2 class="text-3xl font-semibold mb-2">Los vengadores</h2>
+                    <p class="customDark mb-4">El poderoso Thanos, decidido a hacerse con las Gemas del Infinito para
+                        controlar el universo, ataca la nave en la que huyen los supervivientes de Asgard. Su intención
+                        es hacerse con la segunda de las gemas, ahora en manos de Loki.</p>
+                    <p class="customDark mb-1"><strong>Director:</strong> Anthony Russo; Joe Russor</p>
+                    <p class="customDark mb-1"><strong>Año:</strong> 2018</p>
+                </div>
+            </article>
+
+            <article id="frozen" class="bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row w-full">
+                <div class="md:w-1/3 flex items-center justify-center">
+                    <img src="../img/peliculas/frozen.png" alt="Imagen de frozen"
+                        class="w-full h-60 object-cover rounded-lg">
+                </div>
+                <div class="md:pl-4 mt-4 md:mt-0 md:w-2/3">
+                    <h2 class="text-3xl font-semibold mb-2">Frozen</h2>
+                    <p class="customDark mb-4">Una profecía condena al reino de Arandelle a vivir en un invierno eterno.
+                        La joven Anna, el temerario montañero Kristoff y el reno Sven deben emprender un viaje épico y
+                        lleno de aventuras en busca de Elsa, la hermana de Anna y Reina de las Nieves. Ella es la única
+                        que puede poner fin al gélido hechizo.</p>
+                    <p class="customDark mb-1"><strong>Director:</strong> Jennifer Lee, Chris Buck</p>
+                    <p class="customDark mb-1"><strong>Año:</strong> 2013</p>
+                </div>
+            </article>
+
+            <article id="rendel" class="bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row w-full">
+                <div class="md:w-1/3 flex items-center justify-center">
+                    <img src="../img/peliculas/rendel.png" alt="Imagen de rendel"
+                        class="w-full h-60 object-cover rounded-lg">
+                </div>
+                <div class="md:pl-4 mt-4 md:mt-0 md:w-2/3">
+                    <h2 class="text-3xl font-semibold mb-2">Rendel</h2>
+                    <p class="customDark mb-4">Una profecía condena al reino de Arandelle a vivir en un invierno eterno.
+                        La venganza engendra venganza.
+
+                        Un hombre se convierte en un enmascarado vigilante en busca de venganza contra la organización
+                        criminal responsable de la muerte de su familia..</p>
+                    <p class="customDark mb-1"><strong>Director:</strong> Jesse Haaja</p>
+                    <p class="customDark mb-1"><strong>Año:</strong> 2017</p>
+                </div>
+            </article>
+
+            <article id="culpaMia" class="bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row w-full">
+                <div class="md:w-1/3 flex items-center justify-center">
+                    <img src="../img/peliculas/culpaMia.png" alt="Imagen de culpa mia"
+                        class="w-full h-60 object-cover rounded-lg">
+                </div>
+                <div class="md:pl-4 mt-4 md:mt-0 md:w-2/3">
+                    <h2 class="text-3xl font-semibold mb-2">Culpa mía</h2>
+                    <p class="customDark mb-4">La joven Noah deja todo para mudarse a la mansión de William Leister, el
+                        flamante y rico marido de su madre Rafaela. Allí conoce a Nick, su nuevo hermanastro. Ella no
+                        tarda en descubrir que, tras la imagen de hijo modelo, Nick oculta algo.</p>
+                    <p class="customDark mb-1"><strong>Director:</strong> Domingo González</p>
                     <p class="customDark mb-1"><strong>Año:</strong> 2023</p>
-                    <p class="customDark"><strong>Clasificación:</strong> PG-13</p>
+                </div>
+            </article>
+
+            <article id="spiderman" class="bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row w-full">
+                <div class="md:w-1/3 flex items-center justify-center">
+                    <img src="../img/peliculas/spiderman.png" alt="Imagen de spiderman"
+                        class="w-full h-60 object-cover rounded-lg">
+                </div>
+                <div class="md:pl-4 mt-4 md:mt-0 md:w-2/3">
+                    <h2 class="text-3xl font-semibold mb-2">Spiderman: Homecoming</h2>
+                    <p class="customDark mb-4">Peter Parker asume su nueva identidad como Spiderman y regresa a vivir
+                        con su tía después de su aventura con los Vengadores. Al volver descubre que ha surgido un nuevo
+                        y despiadado enemigo que pretende destruir todo lo que ama: el Buitre.</p>
+                    <p class="customDark mb-1"><strong>Director:</strong> Jon Watts</p>
+                    <p class="customDark mb-1"><strong>Año:</strong> 2017</p>
+                </div>
+            </article>
+
+            <article id="sinMalosRollos" class="bg-white p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row w-full">
+                <div class="md:w-1/3 flex items-center justify-center">
+                    <img src="../img/peliculas/SinMalosRollos.png" alt="Imagen de sin malos rollos"
+                        class="w-full h-60 object-cover rounded-lg">
+                </div>
+                <div class="md:pl-4 mt-4 md:mt-0 md:w-2/3">
+                    <h2 class="text-3xl font-semibold mb-2">Sin malos rollos</h2>
+                    <p class="customDark mb-4">Maddie, una mujer de 32 años en bancarrota, acepta la propuesta de los padres del joven Percy, quienes le ofrecen un coche de lujo a cambio de fingir atracción por su hijo y así aumente su autoestima antes de que vaya a la universidad.</p>
+                    <p class="customDark mb-1"><strong>Director:</strong> Gene Stupnitsky</p>
+                    <p class="customDark mb-1"><strong>Año:</strong> 2023</p>
                 </div>
             </article>
         </section>
     </main>
-    
-    
-    
+
     <footer class="bg-customDark text-customWhite py-2">
         <nav class="container-fluid flex flex-col lg:flex-row lg:justify-between text-center">
             <!-- Nombre del sitio -->
